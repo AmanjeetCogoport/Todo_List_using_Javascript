@@ -2,7 +2,7 @@
 
 let todoArray = [];
 let idCount = 0;
-let countTodo = 1;
+let countTodo = 0;
 
 
 
@@ -51,6 +51,8 @@ let addTodoList = () => {
 }
 
 
+
+
 // show todo list code.
 let showTodoList = () =>{
     
@@ -76,8 +78,8 @@ let showTodoList = () =>{
               <h5 class="card-title">Todo ${numberofTodo++}</h5>
               <p class="card-text" id="${todolist.id}" >${todolist.list}</p>
         
-              <a href="#" onclick="editList(${todolist.id}"  class="btn btn-success ">Done</a>
-              <a href="#" onclick="editList(${todolist.id}" class="btn btn-primary">Edit</a>
+              <a href="#" onclick="doneTodoList(${todolist.id})"  class="btn btn-success ">Done</a>
+              <a href="#" onclick="editList(${todolist.id})" class="btn btn-primary">Edit</a>
               <a href="#" class="btn btn-danger" onclick="deleteList(${todolist.id})">Delete</a>
               
               
@@ -88,14 +90,14 @@ let showTodoList = () =>{
         else{
             todoListContainer.innerHTML += `
             <div class="card m-3 p-2" style="width: 18rem;">
-            <div class="card-body">
+            <div class="card-body bg-success">
               <del>
-              <h5 class="card-title">Todo ${countTodo++}</h5>
-              <p class="card-text">${currentListData}</p>
+              <h5 class="card-title">Todo ${numberofTodo++}</h5>
+              <p class="card-text">${todolist.list}</p>
               </del>
-        
-              <a href="#" onclick="editList(${todolist.id}"  class="btn btn-success ">Done</a>
-              <a href="#" onclick="editList(${todolist.id}" class="btn btn-primary">Edit</a>
+              <p> </p>
+              <a href="#" onclick="doneTodoList(${todolist.id})"  class="btn btn-success ">Done</a>
+              <a href="#" onclick="editList(${todolist.id})" class="btn btn-primary">Edit</a>
               <a href="#" class="btn btn-danger" onclick="deleteList(${todolist.id})">Delete</a>
               
               
@@ -120,7 +122,44 @@ let deleteList = (id) => {
     setDataToLocalStorage(newTodoList);
     console.log(newTodoList);
     showTodoList();
+
+    // setDataToLocalStorage(todoArray.filter( (list) => list.id === id));
+    // showTodoList();
 }
+
+// fucntionality for done todo list.
+
+let doneTodoList = (id) => {
+    // let updatedTodoList = [];
+    todoArray.map( (list) => {
+        if(list.id === id){
+            if(list.status === 0) return list.status = 1;
+            return list.status = 0;
+        }
+    })
+
+    setDataToLocalStorage(todoArray);
+    showTodoList();
+}
+
+// edit todoList functionality
+
+let editList = (id) => {
+    // alert("clicked " + id)
+    let updatedTodoList = window.prompt("Change List");
+    // alert(updatedTodoList);
+    todoArray.map( (list) => {
+        if(list.id === id){
+            return list.list = updatedTodoList;
+        }
+    
+    })
+
+    setDataToLocalStorage(todoArray);
+    showTodoList();
+}
+
+
 
 
 // reset todoList
