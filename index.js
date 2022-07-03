@@ -110,6 +110,19 @@ let showTodoList = () =>{
 }
 
 
+// functionality for delete todo list.
+
+let deleteList = (id) => {
+    let newTodoList = [];
+    todoArray.forEach( (list) => {
+        if(id !== list.id ) newTodoList.push(list);
+    });
+    setDataToLocalStorage(newTodoList);
+    console.log(newTodoList);
+    showTodoList();
+}
+
+
 // reset todoList
 function resetTodoList(){
     todoArray = [];
