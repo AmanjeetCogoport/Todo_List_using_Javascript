@@ -23,7 +23,7 @@
     </div>
 
     <div class="container container-sm container-md container-lg" id="addTodoContainer">
-        <form class=" p4">
+        <form >
             
             <div class="mb-3">
               <label for="todoText" class="form-label"></label>
@@ -33,15 +33,15 @@
             </div>
 
             
-            <button type="submit" class="btn btn-primary mb-12 bg-success" id="addTodo">Add Todo</button>
-            <button type="submit" class="btn btn-primary mb-12" id="resetTodo">Reset Todo</button>
+            <button type="submit" class="btn btn-primary mb-12 bg-success" id="addTodo " onclick="addTodoList()">Add Todo</button>
+            <button type="button" class="btn btn-primary mb-12" id="resetTodo" onclick="resetTodoList()">Reset Todo</button>
 
           </form>
     </div>
 
-    <div class="container d-flex flex-wrap container-sm continer-md container-lg border mt-5 p-3" id="todoListContainer">
+    <div class="container d-flex justify-content-center-sm justify-content-center-md justify-content-center-lg flex-wrap container-sm continer-md container-lg border mt-5 p-3" id="todoListContainer">
 
-        <div class="card m-3 p-2" style="width: 18rem;">
+        <!-- <div class="card m-3 p-2" style="width: 18rem;">
             <div class="card-body">
               <h5 class="card-title">Todo 1</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -52,86 +52,13 @@
               
               
             </div>
-        </div>
+        </div> -->
 
-        <div class="card m-3 p-2" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Todo 1</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-              <a href="#" class="btn btn-success">Done</a>
-              <a href="#" class="btn btn-primary">Edit</a>
-              <a href="#" class="btn btn-danger">Delete</a>
-              
-              
-            </div>
-        </div>
-
-        <div class="card m-3 p-2" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Todo 1</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-              <a href="#" class="btn btn-success">Done</a>
-              <a href="#" class="btn btn-primary">Edit</a>
-              <a href="#" class="btn btn-danger">Delete</a>
-              
-              
-            </div>
-        </div>
-
-        <div class="card m-3 p-2" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Todo 1</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-              <a href="#" class="btn btn-success">Done</a>
-              <a href="#" class="btn btn-primary">Edit</a>
-              <a href="#" class="btn btn-danger">Delete</a>
-              
-              
-            </div>
-        </div>
-
-        <div class="card m-3 p-2" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Todo 1</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-              <a href="#" class="btn btn-success">Done</a>
-              <a href="#" class="btn btn-primary">Edit</a>
-              <a href="#" class="btn btn-danger">Delete</a>
-              
-              
-            </div>
-        </div>
-
-        <div class="card m-3 p-2" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Todo 1</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-              <a href="#" class="btn btn-success">Done</a>
-              <a href="#" class="btn btn-primary">Edit</a>
-              <a href="#" class="btn btn-danger">Delete</a>
-              
-              
-            </div>
-        </div>
-
-        <div class="card m-3 p-2" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Todo 1</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-              <a href="#" class="btn btn-success">Done</a>
-              <a href="#" class="btn btn-primary">Edit</a>
-              <a href="#" class="btn btn-danger">Delete</a>
-              
-              
-            </div>
-        </div>
         
+
+
+        
+
 
         
 
@@ -139,6 +66,9 @@
 
 
     </div>
+
+    <!-- adding custom js file -->
+    <script src="./index.js"></script>
 
 
     <!-- bootstrap 5 cdn javascript -->
