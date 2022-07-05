@@ -61,7 +61,7 @@ let showTodoList = () =>{
         todoArray = getDataFromLocalStorage("todoArray");
     }
     else{
-        setDataToLocalStorage("todoArray", [])
+        setDataToLocalStorage([])
     }
 
     let numberofTodo = 1;
@@ -169,6 +169,8 @@ function resetTodoList(){
     showTodoList();
     idCount = 1;
 }
+
+
 
 
 
