@@ -122,11 +122,16 @@ let showTodoList = () =>{
 
 let deleteList = (id) => {
     let newTodoList = [];
-    todoArray.forEach( (list) => {
-        if(id !== list.id ) newTodoList.push(list);
-    });
-    setDataToLocalStorage(newTodoList);
-    console.log(newTodoList);
+
+    if(window.confirm("Do You Want to delete the task?")){
+        todoArray.forEach( (list) => {
+            if(id !== list.id ) newTodoList.push(list);
+        });
+        setDataToLocalStorage(newTodoList);
+        console.log(newTodoList);
+    }
+
+
     showTodoList();
 
     // setDataToLocalStorage(todoArray.filter( (list) => list.id === id));
