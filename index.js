@@ -75,6 +75,8 @@ let showTodoList = () =>{
     todoListContainer.innerHTML = "";
 
     todoArray.forEach( todolist =>{
+        todoArray[numberofTodo-1].id = numberofTodo;
+        console.log(todoArray[numberofTodo-1]);
         if(todolist.status === 0){
             todoListContainer.innerHTML += `
             <div class="card m-3 p-2" style="width: 18rem;">
