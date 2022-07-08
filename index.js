@@ -29,8 +29,9 @@ let addTodoList = () => {
     let currentListData = document.getElementById("todoText").value;
     // alert("ramji")
     // alert(currentListData)
-
-    document.getElementById("todoText").value = "";
+    if(currentListData.length == 0) alert("Empty task can't be todo!!")
+    else{
+        document.getElementById("todoText").value = "";
     // alert(currentListData);
 
     // alert(todoList);
@@ -45,6 +46,9 @@ let addTodoList = () => {
     
     setDataToLocalStorage(todoArray)
     showTodoList();
+    }
+
+    
     // console.log(todoArray);
     return false;
 
