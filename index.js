@@ -10,6 +10,8 @@ let countTodo = 0;
 let getDataFromLocalStorage = () => {
     let data = localStorage.getItem("todoArray");
     todoArray = JSON.parse(data);
+
+    
     return todoArray;
 }
 
